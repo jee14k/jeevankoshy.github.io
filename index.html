@@ -154,12 +154,40 @@
   <script>
     AOS.init();
   </script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function() {
-      emailjs.init("cv_nP03uqYcg3bU_p"); 
-    })();
-  </script>
-  <script src="js/contact.js"></script>
+
+  <script type="module">
+  import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+
+  emailjs.init('cv_nP03uqYcg3bU_p'); // ✅ Replace with your actual Public Key
+
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = form.elements[0].value;
+    const email = form.elements[1].value;
+    const message = form.elements[2].value;
+
+    const templateParams = {
+      from_name: name,
+      reply_to: email,
+      message: message
+    };
+
+    emailjs.send('service_7q7ukyj', 'template_cdaivhf', templateParams)
+      .then(() => {
+        alert('Message sent successfully!');
+        form.reset();
+      })
+      .catch((error) => {
+        alert('Failed to send message: ' + JSON.stringify(error));
+      });
+  });
+</script>
+
+  
+  
+  
 </body>
 </html>
