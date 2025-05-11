@@ -1,5 +1,6 @@
 body {
   scroll-behavior: smooth;
+  padding-top: 4rem; /* Adjust padding to prevent content from being hidden under the navbar */
 }
 
 section {
@@ -10,4 +11,11 @@ section {
 .card:hover {
   transform: translateY(-5px);
   transition: 0.3s;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030; /* Ensures it stays above other content */
 }
