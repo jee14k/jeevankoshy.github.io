@@ -19,3 +19,23 @@ section {
   width: 100%;
   z-index: 1030; /* Ensures it stays above other content */
 }
+
+.timeline {
+  border-left: 2px solid #007bff;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #007bff;
+  border-radius: 50%;
+}
