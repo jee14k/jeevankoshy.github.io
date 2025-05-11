@@ -155,11 +155,10 @@
     AOS.init();
   </script>
 
-  
   <script type="module">
-  import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+  import { init, send } from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
 
-  emailjs.init('cv_nP03uqYcg3bU_p'); // Replace with your real public key
+  init('cv_nP03uqYcg3bU_p'); // Your public key
 
   document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();
@@ -168,7 +167,7 @@
     const email = document.querySelector("input[placeholder='Your Email']").value;
     const message = document.querySelector("textarea[placeholder='Your Message']").value;
 
-    emailjs.send("service_7q7ukyj", "template_cdaivhf", {
+    send("service_7q7ukyj", "template_cdaivhf", {
       from_name: name,
       from_email: email,
       message: message,
@@ -183,9 +182,6 @@
   });
 </script>
 
-
-  
-  
   
 </body>
 </html>
