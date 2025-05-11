@@ -1,0 +1,13 @@
+body {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
