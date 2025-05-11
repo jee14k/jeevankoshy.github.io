@@ -18,6 +18,7 @@ section {
   top: 0;
   width: 100%;
   z-index: 1030; /* Ensures it stays above other content */
+  background-color: #007bff; /* Ensures the navbar has a background color */
 }
 
 .timeline {
