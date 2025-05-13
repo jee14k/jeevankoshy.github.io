@@ -67,12 +67,27 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-5" data-aos="fade-up">
-    <div class="container">
-      <h2 class="text-center mb-4">About Me</h2>
-      <p class="text-center">I’m a graduate student with a love for data to develop various visualisations and insights. I am skilled in Python, R, SQL and more!</p>
+<section id="about" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4" data-aos="fade-up" data-aos-delay="100">About Me</h2>
+    
+    <!-- Optional profile image -->
+    <!-- <img src="your-profile.jpg" alt="Profile Photo" class="rounded-circle mb-3" width="120" data-aos="zoom-in" data-aos-delay="200"> -->
+    
+    <p class="lead" data-aos="fade-up" data-aos-delay="300">
+      I'm a passionate Data Science graduate student at Monash University, driven by the power of data to create meaningful visualizations and insights.
+      Skilled in Python, R, SQL. I enjoy uncovering hidden patterns and telling stories through data.
+    </p>
+
+    <div class="my-3" data-aos="fade-up" data-aos-delay="400">
+      <i class="fab fa-python fa-2x text-info mx-2"></i>
+      <i class="fab fa-r-project fa-2x text-primary mx-2"></i>
+      <i class="fas fa-database fa-2x text-warning mx-2"></i>
+      <i class="fas fa-chart-bar fa-2x text-success mx-2"></i>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Experience Section -->
   <section id="experience" class="py-5" data-aos="fade-up">
@@ -111,50 +126,112 @@
 <section id="education" class="py-5 bg-light" data-aos="fade-up">
   <div class="container">
     <h2 class="text-center mb-4">Education</h2>
-    <div class="timeline-container d-flex justify-content-around align-items-start">
+    
+    <!-- Corrected container with two separate timeline items side by side -->
+    <div class="row">
+      
       <!-- Master of Data Science -->
-      <div class="timeline-item">
-        <h5>Master of Data Science</h5>
-        <p class="text-muted mb-2">Monash University, 2023 - 2025</p>
-        <p>Specialized in machine learning, data visualization, and statistical analysis.</p>
-        
-        <h6>Semester 1</h6>
-        <ul>
-          <li><i class="fas fa-database text-primary"></i> Introduction to Data Science</li>
-          <li><i class="fas fa-code text-success"></i> Python for Data Analysis</li>
-          <li><i class="fas fa-chart-line text-warning"></i> Machine Learning Fundamentals</li>
-        </ul>
+      <div class="col-md-6 mb-4">
+        <div class="timeline-item">
+          <h5>Master of Data Science</h5>
+          <p class="text-muted mb-2">Monash University, 2023 - 2025</p>
+          
 
-        <h6>Semester 2</h6>
-        <ul>
-          <li><i class="fas fa-brain text-danger"></i> Deep Learning</li>
-          <li><i class="fas fa-cogs text-info"></i> Data Engineering</li>
-          <li><i class="fas fa-search text-dark"></i> Research Methodologies</li>
-        </ul>
+          <h6>Semester 1</h6>
+          <ul>
+            <li><i class="fas fa-database text-primary"></i> Introduction to Databases</li>
+            <li><i class="fas fa-code text-success"></i> Algorithms and Programming Foundations in Python</li>
+            <li><i class="fas fa-microchip text-warning"></i> Introduction to Computer Architecture and Networks</li>
+            <li><i class="fas fa-square-root-alt text-info"></i> Mathematical Foundations for Data Science and AI</li>
+          </ul>
 
-        <h6>Semester 3</h6>
-        <ul>
-          <li><i class="fas fa-bar-chart text-primary"></i> Data Visualization</li>
-          <li><i class="fas fa-cloud text-secondary"></i> Cloud Computing</li>
-          <li><i class="fas fa-database text-warning"></i> Big Data Analytics</li>
-        </ul>
+          <h6>Semester 2</h6>
+          <ul>
+            <li><i class="fas fa-brain text-danger"></i> Introduction to Data Science</li>
+            <li><i class="fas fa-vial text-info"></i> IT Research Methods</li>
+            <li><i class="fas fa-tasks text-dark"></i> Project Management</li>
+            <li><i class="fas fa-project-diagram text-dark"></i> Statistical Data Modelling</li>
+          </ul>
 
-        <h6>Semester 4</h6>
-        <ul>
-          <li><i class="fas fa-user-graduate text-success"></i> Capstone Project</li>
-          <li><i class="fas fa-lightbulb text-primary"></i> Innovation in AI</li>
-        </ul>
+          <h6>Semester 3</h6>
+          <ul>
+            <li><i class="fas fa-chart-bar text-primary"></i> Data Exploration and Visualization</li>
+            <li><i class="fas fa-sliders-h text-secondary"></i> Data Wrangling</li>
+            <li><i class="fas fa-server text-warning"></i> Data Processing for Big Data</li>
+            <li><i class="fas fa-dna text-warning"></i> Introduction to Bioinformatics</li>
+          </ul>
+
+          <h6>Semester 4</h6>
+          <ul>
+            <li><i class="fas fa-user-graduate text-success"></i> Industry Experience Project</li>
+            <li><i class="fas fa-briefcase text-primary"></i> IT Professional Practice</li>
+            <li><i class="fas fa-sitemap text-primary"></i> IT Strategy and Governance</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Bachelor of Computer Science, Mathematics, Statistics -->
-      <div class="timeline-item">
-        <h5>Bachelor of Computer Science, Mathematics, Statistics (Triple Major)</h5>
-        <p class="text-muted mb-2">CHRIST (Deemed to be University), 2017 - 2020</p>
-        <p>Focused on software development, algorithms, and database management.</p>
+      <div class="col-md-6 mb-4">
+        <div class="timeline-item">
+          <h5>Bachelor of Computer Science, Mathematics, Statistics</h5>
+          <p class="text-muted mb-2">CHRIST (Deemed to be University), 2017 - 2020</p>
+            <h6>Semester 1</h6>
+            <ul>
+              <li><i class="fas fa-microchip text-primary"></i> Digital Computer Fundamentals and Programming using C</li>
+              <li><i class="fas fa-square-root-alt text-success"></i> Differential Calculus</li>
+              <li><i class="fas fa-percentage text-warning"></i> Descriptive Statistics and Probability Theory</li>
+              <li><i class="fas fa-book-open text-info"></i> English</li>
+            </ul>
+
+            <h6>Semester 2</h6>
+            <ul>
+              <li><i class="fas fa-cogs text-danger"></i> Data Structures and Operating Systems</li>
+              <li><i class="fas fa-square-root-alt text-info"></i> Differential Equations</li>
+              <li><i class="fas fa-chart-pie text-dark"></i> Statistical Methods</li>
+              <li><i class="fas fa-book text-secondary"></i> Additional English</li>
+            </ul>
+
+            <h6>Semester 3</h6>
+            <ul>
+              <li><i class="fas fa-database text-primary"></i> Database Management Systems and Software Engineering</li>
+              <li><i class="fas fa-project-diagram text-secondary"></i> Real Analysis</li>
+              <li><i class="fas fa-python text-warning"></i> Python Programming for Mathematics</li>
+              <li><i class="fas fa-chart-line text-danger"></i> Statistical Inference</li>
+            </ul>
+
+            <h6>Semester 4</h6>
+            <ul>
+              <li><i class="fas fa-code text-success"></i> Object Oriented Programming Using Java</li>
+              <li><i class="fas fa-superscript text-primary"></i> Algebra</li>
+              <li><i class="fas fa-laptop-code text-info"></i> Mathematical Models Using Python</li>
+              <li><i class="fas fa-drafting-compass text-warning"></i> Sampling Techniques</li>
+            </ul>
+
+            <h6>Semester 5</h6>
+            <ul>
+              <li><i class="fas fa-ruler-combined text-success"></i> Linear Algebra</li>
+              <li><i class="fas fa-chart-line text-primary"></i> Linear Regression Models</li>
+              <li><i class="fas fa-network-wired text-info"></i> Internet of Things</li>
+              <li><i class="fas fa-calculator text-warning"></i> Numerical Methods</li>
+              <li><i class="fas fa-vial text-danger"></i> Design of Experiments</li>
+            </ul>
+
+            <h6>Semester 6</h6>
+            <ul>
+              <li><i class="fas fa-network-wired text-success"></i> Computer Networks</li>
+              <li><i class="fas fa-robot text-primary"></i> Introduction to Soft Computing</li>
+              <li><i class="fas fa-infinity text-warning"></i> Complex Analysis</li>
+              <li><i class="fas fa-clock text-secondary"></i> Time Series Analysis and Forecasting Techniques</li>
+              <li><i class="fas fa-project-diagram text-info"></i> Graph Theory</li>
+              <li><i class="fas fa-random text-danger"></i> Stochastic Process and Queuing Theory</li>
+            </ul>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 
 
@@ -176,17 +253,6 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="card shadow-sm h-100">
-            <img src="images/RQI_image1.png" class="card-img-top" alt="Project 2" />
-            <div class="card-body">
-              <h5 class="card-title">Road Quality Index</h5>
-              <p class="card-text">Developed the Android Application to record sensor values such as the accelerometer and gyroscope of the mobile device and send it to AWS server for processing road variations to identify potholes.</p>
-              <p><i class="fab fa-android"></i> Android | <i class="fas fa-chart-bar"></i> Dashboard</p>
-              <a href="https://chaitanya.ai/projects/rqi" class="btn btn-primary" target="_blank">View Project</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="card shadow-sm h-100">
             <img src="images/nomorebully.png" class="card-img-top" alt="Project 2" />
             <div class="card-body">
               <h5 class="card-title">No More Bullying</h5>
@@ -196,7 +262,17 @@
             </div>
           </div>
         </div>
-
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm h-100">
+            <img src="images/RQI_image1.png" class="card-img-top" alt="Project 2" />
+            <div class="card-body">
+              <h5 class="card-title">Road Quality Index</h5>
+              <p class="card-text">Developed the Android Application to record sensor values such as the accelerometer and gyroscope of the mobile device and send it to AWS server for processing road variations to identify potholes.</p>
+              <p><i class="fab fa-android"></i> Android | <i class="fas fa-chart-bar"></i> Dashboard</p>
+              <a href="https://chaitanya.ai/projects/rqi" class="btn btn-primary" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
         <!-- More projects can be added here -->
       </div>
     </div>
