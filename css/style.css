@@ -8,6 +8,31 @@ section {
   padding-bottom: 4rem;
 }
 
+section {
+  margin-top: 0 !important;
+}
+
+.navbar {
+  margin-bottom: 0 !important;
+  border-bottom: none;
+}
+
+
+header {
+  margin-bottom: 0;
+}
+
+.hero {
+  margin-top: 0;
+  padding-top: 0; /* or reduce if needed */
+}
+
+
+body, h1, h2, h3, p, section {
+  margin: 0;
+  padding: 0;
+}
+
 .card:hover {
   transform: translateY(-5px);
   transition: 0.3s;
@@ -94,6 +119,25 @@ h6 {
   margin-top: 20px;
   font-size: 1.1rem;
 }
+
+footer a i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer a:hover i {
+  transform: scale(1.2);
+  color: #0dcaf0; /* or any highlight color */
+}
+
+footer {
+  transition: background-color 0.5s ease;
+}
+
+footer:hover {
+  background-color: #1c1c1c;
+}
+
+
 
 .text-primary { color: #007bff; }
 .text-success { color: #28a745; }
