@@ -14,3 +14,28 @@ html {
       box-shadow: 0 10px 20px rgba(0,0,0,0.15);
       transition: 0.3s ease;
     }
+
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #f1f1f1;
+}
+
+.dark-mode .navbar,
+.dark-mode .card,
+.dark-mode .bg-light {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1;
+}
+
+.dark-mode .btn-outline-light {
+  color: #f1f1f1;
+  border-color: #f1f1f1;
+}
+
+.dark-mode a {
+  color: #90caf9;
+}
+
+body.dark-mode .text-muted {
+  color: #ccc !important; /* lighter gray for dark background */
+}
