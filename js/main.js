@@ -2,7 +2,7 @@ window.onload = function () {
   const parts = [
     "Post-Graduate in Data Science",
     ", Ex-Deloitte",
-    ". Currently seeking opportunities"
+    " | Currently seeking opportunities"
   ];
 
   let fullText = "";
@@ -18,14 +18,19 @@ window.onload = function () {
     typingElement.textContent = fullText;
 
     if (charIndex < currentPart.length) {
-      setTimeout(type, 50); // typing speed
+      setTimeout(type, 40); // typing speed
     } else {
       // Move to next part
       partIndex++;
       charIndex = 0;
-      setTimeout(type, 700); // slight pause before next part
+      setTimeout(type, 400); // slight pause before next part
     }
   }
 
   type(); // start typing
 };
+
+AOS.init({
+    duration: 500,
+    once: true,
+  });
