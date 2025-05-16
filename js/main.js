@@ -34,3 +34,7 @@ AOS.init({
     duration: 500,
     once: true,
   });
+
+  window.addEventListener("load", () => {
+  document.body.classList.add("fade-in");
+});
