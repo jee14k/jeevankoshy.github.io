@@ -122,3 +122,8 @@ body.fade-in {
 body, section, div {
   transition: background-color 0.5s ease, color 0.5s ease;
 }
+
+.card-img-top.custom-img {
+  height: 200px;
+  object-fit: cover;
+}
