@@ -117,3 +117,7 @@ body.fade-in {
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+body, section, div {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
