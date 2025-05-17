@@ -94,7 +94,8 @@ body.fade-in {
   height: 100%;
   background: black;
   color: limegreen;
-  font-family: 'Courier New', monospace;
+  font-family: 'Courier New', 'Courier New', Courier, monospace;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
