@@ -1,34 +1,48 @@
-window.onload = function () {
-  const parts = [
+document.addEventListener("DOMContentLoaded", () => {
+  const splash = document.getElementById("terminal-splash");
+  const mainContent = document.body;
+
+  // Hide content initially
+  mainContent.style.overflow = "hidden";
+
+  // Typing logic here...
+  const phrases = [
     "Post-Graduate in Data Science",
     ", Ex-Deloitte",
     " | Currently seeking opportunities"
   ];
+  let currentPhrase = 0;
+  let currentLetter = 0;
+  let typedText = document.getElementById("typed-text");
 
-  let fullText = "";
-  let partIndex = 0;
-  let charIndex = 0;
-
-  function type() {
-    const typingElement = document.querySelector(".typing-text");
-    if (!typingElement || partIndex >= parts.length) return;
-
-    const currentPart = parts[partIndex];
-    fullText += currentPart[charIndex++];
-    typingElement.textContent = fullText;
-
-    if (charIndex < currentPart.length) {
-      setTimeout(type, 40); // typing speed
+  function typePhrase() {
+    if (currentPhrase < phrases.length) {
+      if (currentLetter < phrases[currentPhrase].length) {
+        typedText.textContent += phrases[currentPhrase].charAt(currentLetter);
+        currentLetter++;
+        setTimeout(typePhrase, 40); // Typing speed
+      } else {
+        currentPhrase++;
+        currentLetter = 0;
+        setTimeout(typePhrase, 500); // Pause before next
+      }
     } else {
-      // Move to next part
-      partIndex++;
-      charIndex = 0;
-      setTimeout(type, 400); // slight pause before next part
+      // Finished typing, fade out splash
+      setTimeout(() => {
+        splash.style.transition = "opacity 1s ease";
+        splash.style.opacity = 0;
+        setTimeout(() => {
+          splash.style.display = "none";
+          mainContent.style.overflow = "auto";
+        }, 1000);
+      }, 200);
     }
   }
 
-  type(); // start typing
-};
+  typePhrase();
+});
+
+
 
 AOS.init({
     duration: 500,

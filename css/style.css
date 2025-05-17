@@ -85,3 +85,35 @@ body {
 body.fade-in {
   opacity: 1;
 }
+
+#terminal-splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: limegreen;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.terminal-content {
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.cursor {
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
