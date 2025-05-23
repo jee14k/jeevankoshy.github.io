@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Contact form has required fields', async ({ page }) => {
-  await page.goto('http://localhost:5500/index.html');
+  await page.goto('https://jeevankoshy.me');
 
   await expect(page.locator('#contact-form input[placeholder="Your Name"]')).toBeVisible();
   await expect(page.locator('#contact-form input[placeholder="Your Email"]')).toBeVisible();
@@ -9,7 +9,7 @@ test('Contact form has required fields', async ({ page }) => {
 });
 
 test('Contact form shows toast after submission (simulate)', async ({ page }) => {
-  await page.goto('http://localhost:5500/index.html');
+  await page.goto('https://jeevankoshy.me');
 
   await page.fill('#contact-form input[placeholder="Your Name"]', 'Test User');
   await page.fill('#contact-form input[placeholder="Your Email"]', 'test@example.com');
