@@ -6,14 +6,14 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '0 3 * * *'  # Runs every day at 3 AM UTC
+    - cron: '0 3 * * *'  # optional: run daily at 3 AM UTC
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Setup Node.js
@@ -24,15 +24,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Playwright
+      - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
         run: npx playwright test
 
-      - name: Upload test results (screenshots, videos, traces)
+      - name: Upload Playwright HTML Report
         if: always()
         uses: actions/upload-artifact@v3
         with:
-          name: playwright-results
-          path: playwright-report/
+          name: playwright-report
+          path: playwright-report
