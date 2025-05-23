@@ -34,9 +34,9 @@ jobs:
         run: ls -la playwright-report
 
 
-      - name: Upload Playwright HTML Report
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: playwright-report
-          path: playwright-report
+     # - name: Upload Playwright HTML Report
+     #   if: always()
+     #   uses: actions/upload-artifact@v3
+     #   with:
+     #     name: playwright-report
+     #     path: playwright-report
