@@ -34,7 +34,6 @@ jobs:
         run: ls -la playwright-report || echo "Folder not found"
 
       - name: Upload Playwright HTML Report
-        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: playwright-report
