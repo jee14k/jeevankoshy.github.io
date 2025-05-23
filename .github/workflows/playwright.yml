@@ -30,6 +30,10 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
 
+      - name: List report folder
+        run: ls -la playwright-report
+
+
       - name: Upload Playwright HTML Report
         if: always()
         uses: actions/upload-artifact@v3
