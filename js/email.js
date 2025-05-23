@@ -1,3 +1,5 @@
+emailjs.init('cv_nP03uqYcg3bU_p');
+
 document.querySelector("form").addEventListener("submit", function(event) {
   event.preventDefault();
 
@@ -17,23 +19,28 @@ document.querySelector("form").addEventListener("submit", function(event) {
     return;
   }
 
-  // ✅ Send to Netlify function
-  fetch("/.netlify/functions/sendEmail", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email, message }),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      if (data.success) {
-        showToast("✅ Message sent successfully!", "success");
-        form.reset();
-      } else {
-        showToast("❌ Failed to send message: " + (data.message || "Unknown error"), "danger");
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-      showToast("❌ An error occurred. Please try again later.", "danger");
-    });
+  emailjs.send("service_7q7ukyj", "template_cdaivhf", {
+    from_name: name,
+    from_email: email,
+    message: message,
+  }).then(() => {
+    showToast("✅ Message sent successfully!", "success");
+    form.reset();
+  }).catch((error) => {
+    console.error(error);
+    showToast("❌ Failed to send message. Please try again later.", "danger");
+  });
 });
+
+function showToast(message, type) {
+  const toastEl = document.getElementById("formToast");
+  const toastBody = document.getElementById("formToastBody");
+
+  toastBody.textContent = message;
+
+  toastEl.classList.remove("bg-success", "bg-danger");
+  toastEl.classList.add(type === "success" ? "bg-success" : "bg-danger");
+
+  const toast = new bootstrap.Toast(toastEl);
+  toast.show();
+}
