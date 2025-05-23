@@ -8,6 +8,9 @@ on:
   schedule:
     - cron: '0 3 * * *'  # optional: run daily at 3 AM UTC
 
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest
